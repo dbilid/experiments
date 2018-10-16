@@ -26,9 +26,9 @@
 PARJ has been tested in DEBIAN 8 and UBUNTU 16.04 and 18.04.
 
 ### Prerequisites
--JAVA 8 with JAVA_HOME environment variable set. (e.g. sudo apt install openjdk-8-jdk
-set default version with sudo update-alternatives --config java
-and set JAVA_HOME: JAVA_HOME="/usr/lib/jvm/java-8-openjdk-amd64/"
+-JAVA 8 with JAVA_HOME environment variable set. (e.g. sudo apt install openjdk-8-jdk)
+set default version (sudo update-alternatives --config java)
+and set JAVA_HOME: (e.g. JAVA_HOME="/usr/lib/jvm/java-8-openjdk-amd64/"
 export JAVA_HOME)
 
 -build-essential (e.g. sudo apt-get install build-essential)
