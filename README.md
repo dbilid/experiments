@@ -23,7 +23,7 @@
 
 ## Running PARJ
 
-Currently we provide [precompiled binaries](http://godel.di.uoa.gr:8080/parj/experiments/parj.tar.gz) for 64 bit linux. Source code and instructions to build will be available soon. PARJ has been tested in DEBIAN 8 and UBUNTU 16.04 and 18.04.
+PARJ has been tested in DEBIAN 8 and UBUNTU 16.04 and 18.04.
 
 ### Prerequisites
 -JAVA 8 with JAVA_HOME environment variable set. (e.g. sudo apt install openjdk-8-jdk
@@ -45,12 +45,15 @@ export JAVA_HOME)
 
 ### Compile PARJ as SQLite Loadable extension:
 Run:
+
 wget godel.di.uoa.gr:8080/parj/experiments/importer.c
-gcc -O3 -o importer.so importer.c -lpthread -lraptor2 -ltcmalloc -fPIC -shared `pkg-config --cflags --libs glib-2.0`;
-(If during startup you will get an error src/tcmalloc.cc:283 Attempt to free invalid pointer, try to compile as gcc -O3 -o importer.so importer.c -lpthread -lraptor2 -fPIC -shared `pkg-config --cflags --libs glib-2.0` -ltcmalloc_minimal; )
+
+gcc -O3 -o importer.so importer.c -lpthread -lraptor2 -ltcmalloc -fPIC -shared \`pkg-config --cflags --libs glib-2.0\`;
+
+(If during startup you will get an error src/tcmalloc.cc:283 Attempt to free invalid pointer, try to compile as gcc -O3 -o importer.so importer.c -lpthread -lraptor2 -fPIC -shared \`pkg-config --cflags --libs glib-2.0\` -ltcmalloc_minimal; )
 
 ### Run
--Download precompiled binaries (e.g. wget godel.di.uoa.gr:8080/parj/experiments/parj.tar.gz)
+-Download PARJ JAVA wrapper (e.g. wget godel.di.uoa.gr:8080/parj/experiments/parj.tar.gz)
 
 -untar (e.g. tar -xzvf parj.tar.gz)
 
