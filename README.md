@@ -1,3 +1,4 @@
+
 # PARJ Experiments
 
 ## PARJ Databases used in evaluation
@@ -25,18 +26,40 @@
 Currently we provide [precompiled binaries](http://godel.di.uoa.gr:8080/parj/experiments/parj.tar.gz) for 64 bit linux. Source code and instructions to build will be available soon. PARJ has been tested in DEBIAN 8 and UBUNTU 16.04 and 18.04.
 
 ### Prerequisites
--JAVA 8 with JAVA_HOME environment variable set. 
+-JAVA 8 with JAVA_HOME environment variable set. (e.g. sudo apt install openjdk-8-jdk
+set default version with sudo update-alternatives --config java
+and set JAVA_HOME: JAVA_HOME="/usr/lib/jvm/java-8-openjdk-amd64/"
+export JAVA_HOME)
 
--google-perftools (e.g. sudo apt-get install google-perftools)
+-build-essential (e.g. sudo apt-get install build-essential)
+
+-libgoogle-perftools-dev (e.g. sudo apt-get install  libgoogle-perftools-dev)
+
+-pkg-config (e.g. sudo apt-get install pkgconf)
+
+-libgtk2 (e.g. sudo apt-get install libgtk2.0-dev)
+
+-libsqlite3-dev (e.g. sudo apt-get install libsqlite3-dev)
+
+-libraptor2-dev (e.g. sudo apt-get install libraptor2-dev)
+
+### Compile PARJ as SQLite Loadable extension:
+Run:
+wget godel.di.uoa.gr:8080/parj/experiments/importer.c
+gcc -O3 -o importer.so importer.c -lpthread -lraptor2 -ltcmalloc -fPIC -shared `pkg-config --cflags --libs glib-2.0`;
+(If during startup you will get an error src/tcmalloc.cc:283 Attempt to free invalid pointer, try to compile as gcc -O3 -o importer.so importer.c -lpthread -lraptor2 -fPIC -shared `pkg-config --cflags --libs glib-2.0` -ltcmalloc_minimal; )
 
 ### Run
 -Download precompiled binaries (e.g. wget godel.di.uoa.gr:8080/parj/experiments/parj.tar.gz)
 
 -untar (e.g. tar -xzvf parj.tar.gz)
 
--change to directory (cd parj) and run: java -cp "exareme-master-0.1-SNAPSHOT.jar:exareme-utils-0.1-SNAPSHOT.jar:external/*" madgik.exareme.master.importer.QueryTester /path/to/directory/ 
+-Move PARJ SQLite loadable extension to PARJ directory:
+mv importer.so parj/ 
 
-where /path/to/database/ is the path where you have downloaded and extracted one of the databases used in evaluation
+-change to directory (cd parj) and run: java -cp "exareme-master-0.1-SNAPSHOT.jar:exareme-utils-0.1-SNAPSHOT.jar:external/*" madgik.exareme.master.importer.QueryTester /path/to/directory/
+
+where /path/to/directory/ is the path where you have downloaded and extracted one of the databases used in evaluation
 
 On startup you will be asked to provide the following information:
 
@@ -49,3 +72,6 @@ On startup you will be asked to provide the following information:
 -Execute queries from File: If yes, after data loading you will be asked to provide the filepath of the file that contains the queries. Each query must be in a single line in the file. Lines with less than 30 characters will be ignored. Each query will be executed 11 times. The last 10 times will be taken into consideration for the average execution time. After all queries in the file have been executed the average execution time for each query, as well as the total average and geomean will be printed. If this setting is no, then you will be asked to directly give as input a query text in a single line (that is query text must not contain new line characters). After execution the number of results and total execution time in ms will be printed and you will be asked to give another query for execution.
 
 -give number of threads: Insert the number of threads that would be used for each query
+
+
+
