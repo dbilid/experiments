@@ -76,5 +76,26 @@ On startup you will be asked to provide the following information:
 
 -give number of threads: Insert the number of threads that would be used for each query
 
+## Execution Times including dictionary lookups and tuple contruction
 
+### lubm10240 32 threads
+
+[802, 385, 647, 11, 5, 7, 473, 1326, 4387, 1459]
+
+geo mean: 223.33807570399932
+
+avg.: 950.2
+
+no of results:[2528, 11058812, 0, 10, 10, 125, 450539, 2528, 4210245, 2278324]
+
+
+### watdiv 1000 32 threads
+
+[10, 7, 6, 6, 10, 48, 4, 3, 5, 2, 2, 6, 9, 12, 7, 22, 8, 10, 18, 133, 9, 7, 15, 4, 9, 7, 11, 19, 4, 5, 6, 3, 50360, 74207, 6812, 187322, 14224, 15493, 3, 3, 7, 6, 5, 4, 238, 6, 15, 32, 254, 22]
+
+geo mean: 24.5253299467
+
+avg.: 6988.8
+
+no of results:[6, 1892, 12, 620, 2646, 4, 144, 0, 13, 100, 8, 0, 42, 6, 13, 185, 36, 111, 14, 4335801, 21308, 18557, 14609, 0, 1226, 1216, 18578, 23995, 202, 341, 1057, 5, 312548533, 353256708, 50018816, 1598301522, 76171155, 76171155, 447, 0, 0, 0, 1148, 571, 0, 252, 0, 17257, 0, 34736]
 
