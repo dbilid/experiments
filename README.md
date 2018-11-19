@@ -48,9 +48,8 @@ Run:
 
 wget godel.di.uoa.gr:8080/parj/experiments/importer.c
 
-gcc -O3 -o importer.so importer.c -lpthread -lraptor2 -ltcmalloc -fPIC -shared \`pkg-config --cflags --libs glib-2.0\`;
+gcc -O3 -o importer.so importer.c -lpthread -lraptor2 -fPIC -shared \`pkg-config --cflags --libs glib-2.0\`;
 
-(If during startup you will get an error src/tcmalloc.cc:283 Attempt to free invalid pointer, try to compile as gcc -O3 -o importer.so importer.c -lpthread -lraptor2 -fPIC -shared \`pkg-config --cflags --libs glib-2.0\` -ltcmalloc_minimal; )
 
 ### Run
 -Download PARJ JAVA wrapper (e.g. wget godel.di.uoa.gr:8080/parj/experiments/parj.tar.gz)
