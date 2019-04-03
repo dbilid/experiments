@@ -1,5 +1,8 @@
 
 # PARJ Experiments
+This page contains pointers to material in order to reproduce the experiments for our paper "Scalable Parallelization of RDF Joins on MulticoreArchitectures" EDBT 2019.
+
+In order to use the latest version of PARJ for importing and querying other datasets please see instructions at https://github.com/dbilid/PARJ
 
 ## PARJ Databases used in evaluation
 
@@ -97,4 +100,24 @@ geo mean: 24.5253299467
 avg.: 6988.8
 
 no of results:[6, 1892, 12, 620, 2646, 4, 144, 0, 13, 100, 8, 0, 42, 6, 13, 185, 36, 111, 14, 4335801, 21308, 18557, 14609, 0, 1226, 1216, 18578, 23995, 202, 341, 1057, 5, 312548533, 353256708, 50018816, 1598301522, 76171155, 76171155, 447, 0, 0, 0, 1148, 571, 0, 252, 0, 17257, 0, 34736]
+
+# Further experiments not included in the paper
+
+## YAGO Dataset
+Yago Dataset and Queries as found in paper Abdelaziz et. al "A survey and experimental comparison of distributed SPARQL engines for very large RDF data"
+
+### Yago 32 Threads (silent mode) - Memory usage: 7.5 GB
+[15, 17, 28, 222]
+geo mean: 35.48238440211353
+avg.: 70.5
+no of results:[17, 0, 605993, 226]
+
+### Yago 32 Threads (including dictionary lookups and tuple contruction) - Memory usage:12 GB
+[13, 14, 139, 243]
+geo mean: 49.793552903804596
+avg.: 102.25
+no of results:[17, 0, 605993, 226]
+
+
+
 
