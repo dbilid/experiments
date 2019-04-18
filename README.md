@@ -107,17 +107,28 @@ no of results:[6, 1892, 12, 620, 2646, 4, 144, 0, 13, 100, 8, 0, 42, 6, 13, 185,
 Yago Dataset and Queries as found in paper Abdelaziz et. al "A survey and experimental comparison of distributed SPARQL engines for very large RDF data"
 
 ### Yago 32 Threads (silent mode) - Memory usage: 7.5 GB
-[15, 17, 28, 222]
-geo mean: 35.48238440211353
-avg.: 70.5
+[11, 13, 20, 10]
+geo mean: 13.004435599166833
+avg.: 13.5
 no of results:[17, 0, 605993, 226]
 
 ### Yago 32 Threads (including dictionary lookups and tuple contruction) - Memory usage:12 GB
-[13, 14, 139, 243]
-geo mean: 49.793552903804596
-avg.: 102.25
+[14, 15, 140, 13]
+geo mean: 24.864095813903013
+avg.: 45.5
 no of results:[17, 0, 605993, 226]
 
+### Yago 1 Thread (silent mode) - Memory usage: 7.5 GB
+[9, 11, 165, 5]
+geo mean: 16.90527678711191
+avg.: 47.5
+no of results:[17, 0, 605993, 226]
+
+### Yago 1 Thread (including dictionary lookups and tuple contruction) - Memory usage:12 GB
+[9, 13, 548, 7]
+geo mean: 25.88308955939017
+avg.: 144.25
+no of results:[17, 0, 605993, 226]
 
 
 
