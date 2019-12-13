@@ -16,6 +16,8 @@ In order to use the latest version of PARJ for importing and querying other data
 
 [LUBM 1280](http://godel.di.uoa.gr:8080/parj/experiments/parjlubm1280.tar.gz)
 
+[YAGO](http://godel.di.uoa.gr:8080/parj/experiments/parjyago.tar.gz)
+
 ## Queries
 
 [WatDiv queries](http://godel.di.uoa.gr:8080/parj/experiments/watdiv.q)
