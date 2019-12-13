@@ -1,6 +1,6 @@
 
 # PARJ Experiments
-This page contains pointers to material in order to reproduce the experiments for our paper "Scalable Parallelization of RDF Joins on MulticoreArchitectures" EDBT 2019.
+This page contains pointers to material in order to reproduce experiments contained in publications.
 
 In order to use the latest version of PARJ for importing and querying other datasets please see instructions at https://github.com/dbilid/PARJ
 
@@ -21,6 +21,8 @@ In order to use the latest version of PARJ for importing and querying other data
 [WatDiv queries](http://godel.di.uoa.gr:8080/parj/experiments/watdiv.q)
 
 [LUBM queries](http://godel.di.uoa.gr:8080/parj/experiments/lubm.q)
+
+[YAGO queries](http://godel.di.uoa.gr:8080/parj/experiments/yago.q)
 
 
 
