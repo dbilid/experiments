@@ -144,11 +144,22 @@ http://godel.di.uoa.gr:8080/parj/experiments/queries-parj-ontop.tar.gz
 http://godel.di.uoa.gr:8080/parj/experiments/LUBM-ex-20.owl
 
 ## Precompiled Binaries
-http://godel.di.uoa.gr:8080/parj/experiments/parjOntop.jar
-
 (In order to use tha latest version and compile from source code please see: https://github.com/dbilid/PARJ-Ontop)
 
-Usage: java -jar parjOntop.jar log sql /directory-to-owl-file/LUBM-ex-20.owl 0 0 0 /directory-to-queries/ /directory-to-dataset/histograms.json noOfThreads
+http://godel.di.uoa.gr:8080/parj/experiments/parjOntop.jar
+
+and 
+
+http://godel.di.uoa.gr:8080/parj/experiments/parj.so 
+
+You will also need:
+-libraptor2-dev (e.g. sudo apt-get install libraptor2-dev)
+
+
+
+Usage: 
+Move parj.so to the same directory with parjOntop.jar and run:
+java -jar parjOntop.jar log sql /directory-to-owl-file/LUBM-ex-20.owl 0 0 0 /directory-to-queries/ /directory-to-dataset/histograms.json noOfThreads
 
 for example: java -jar parjOntop.jar log sql ~/semanticIndexData/LUBM-ex-20.owl 0 0 0 ~/EUGen/queries-parj-ontop/ ~/eubm1000sub20/histograms.json 32
 
