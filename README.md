@@ -4,6 +4,8 @@ This page contains pointers to material in order to reproduce experiments contai
 
 In order to use the latest version of PARJ for importing and querying other datasets please see instructions at https://github.com/dbilid/PARJ
 
+For reproducing the experiments and measuring time, please make sure that no memory swapping is occurring, as this will result to poor performance.
+
 ## PARJ Databases used in evaluation
 
 [WatDiv 1000](http://godel.di.uoa.gr:8080/parj/experiments/parjwatdiv1000.tar.gz)
