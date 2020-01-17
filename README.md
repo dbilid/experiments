@@ -105,34 +105,56 @@ avg.: 6988.8
 
 no of results:[6, 1892, 12, 620, 2646, 4, 144, 0, 13, 100, 8, 0, 42, 6, 13, 185, 36, 111, 14, 4335801, 21308, 18557, 14609, 0, 1226, 1216, 18578, 23995, 202, 341, 1057, 5, 312548533, 353256708, 50018816, 1598301522, 76171155, 76171155, 447, 0, 0, 0, 1148, 571, 0, 252, 0, 17257, 0, 34736]
 
-# Further experiments not included in the paper
-
-## YAGO Dataset
+# Results for YAGO
 Yago Dataset and Queries as found in paper Abdelaziz et. al "A survey and experimental comparison of distributed SPARQL engines for very large RDF data"
 
-### Yago 32 Threads (silent mode) - Memory usage: 7.5 GB
+## Yago 32 Threads (silent mode) - Memory usage: 7.5 GB
 [11, 13, 20, 10]
 geo mean: 13.004435599166833
 avg.: 13.5
 no of results:[17, 0, 605993, 226]
 
-### Yago 32 Threads (including dictionary lookups and tuple contruction) - Memory usage:12 GB
+## Yago 32 Threads (including dictionary lookups and tuple contruction) - Memory usage:12 GB
 [14, 15, 140, 13]
 geo mean: 24.864095813903013
 avg.: 45.5
 no of results:[17, 0, 605993, 226]
 
-### Yago 1 Thread (silent mode) - Memory usage: 7.5 GB
+## Yago 1 Thread (silent mode) - Memory usage: 7.5 GB
 [9, 11, 165, 5]
 geo mean: 16.90527678711191
 avg.: 47.5
 no of results:[17, 0, 605993, 226]
 
-### Yago 1 Thread (including dictionary lookups and tuple contruction) - Memory usage:12 GB
+## Yago 1 Thread (including dictionary lookups and tuple contruction) - Memory usage:12 GB
 [9, 13, 548, 7]
 geo mean: 25.88308955939017
 avg.: 144.25
 no of results:[17, 0, 605993, 226]
+
+# Queries Over OWL2-QL with Parj-Ontop
+
+## Dataset
+[EUBM 1000, 5% incompleteness, 20 subclasses] (http://godel.di.uoa.gr:8080/parj/experiments/eubm1000sub20.tar.gz)
+
+## Queries
+http://godel.di.uoa.gr:8080/parj/experiments/queries-parj-ontop.tar.gz
+
+## Ontology
+http://godel.di.uoa.gr:8080/parj/experiments/LUBM-ex-20.owl
+
+## Precompiled Binaries
+http://godel.di.uoa.gr:8080/parj/experiments/ontopParj.jar
+
+(In order to use tha latest version and compile from source code please see: https://github.com/dbilid/PARJ-Ontop)
+
+Usage: java -jar parjOntop.jar log sql /directory-to-owl-file/LUBM-ex-20.owl 0 0 0 /directory-to-queries/ /directory-to-dataset/histograms.json noOfThreads
+
+for example: java -jar parjOntop.jar log sql ~/semanticIndexData/LUBM-ex-20.owl 0 0 0 ~/EUGen/queries-parj-ontop/ ~/eubm1000sub20/histograms.json 32
+
+
+
+
 
 
 
