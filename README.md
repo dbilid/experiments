@@ -144,7 +144,7 @@ http://godel.di.uoa.gr:8080/parj/experiments/queries-parj-ontop.tar.gz
 http://godel.di.uoa.gr:8080/parj/experiments/LUBM-ex-20.owl
 
 ## Precompiled Binaries
-http://godel.di.uoa.gr:8080/parj/experiments/ontopParj.jar
+http://godel.di.uoa.gr:8080/parj/experiments/parjOntop.jar
 
 (In order to use tha latest version and compile from source code please see: https://github.com/dbilid/PARJ-Ontop)
 
